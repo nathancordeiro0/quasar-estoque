@@ -16,7 +16,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'me', name: 'me', component: () => import('pages/Me.vue') }
+      { path: 'me', name: 'me', component: () => import('pages/Me.vue') },
+      { path: 'category', name: 'category', component: () => import('pages/category/List.vue') },
+      { path: 'form-category/:id?', name: 'form-category', component: () => import('pages/category/FormCategory.vue') }
       // { path: '', component: () => import('pages/IndexPage.vue') }
     ],
     meta: {

@@ -46,7 +46,7 @@ export function useAuthUser () {
   }
 
   const sendPasswordRestEmail = async (email) => {
-    const { user, error } = await supabase.auth.resetPasswordForEmail(email)
+    const { user, error } = await supabase.auth.api.resetPasswordForEmail(email)
     if (error) throw error
     return user
   }
