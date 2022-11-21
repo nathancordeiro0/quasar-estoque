@@ -14,7 +14,7 @@
       </span>
       <q-space />
       <q-btn
-        v-if="$q.platform.is.desktop"
+        class="desktop-only"
         label="Add New"
         color="primary"
         icon="mdi-plus"
@@ -40,7 +40,7 @@
     </div>
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-btn
-        v-if="$q.platform.is.mobile"
+        class="mobile-only"
         fab
         icon="mdi-plus"
         color="primary"
